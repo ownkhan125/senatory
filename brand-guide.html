@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Senator — Brand Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --brand-red: #dd131a;
+    --brand-red-dark: #b30f15;
+    --brand-red-soft: #fbe5e6;
+    --ink: #232323;
+    --ink-soft: #3a3a3a;
+    --paper: #fafaf7;
+    --paper-alt: #f1f1ef;
+    --pk-green: #01411c;
+    --pk-green-soft: #e6efe9;
+    --navy: #0e2a47;
+    --gray-100: #f1f1ef;
+    --gray-200: #e5e5e2;
+    --gray-300: #d4d4d0;
+    --gray-400: #a3a3a0;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #2a2a2a;
+    --success: #10b981;
+    --error: #ef4444;
+    --warning: #f59e0b;
+    --shadow-sm: 0 1px 2px rgba(35, 35, 35, 0.06);
+    --shadow-md: 0 4px 12px rgba(35, 35, 35, 0.08), 0 2px 4px rgba(35, 35, 35, 0.04);
+    --shadow-lg: 0 12px 32px rgba(35, 35, 35, 0.1), 0 4px 8px rgba(35, 35, 35, 0.04);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: 64px; font-weight: 800; }
+  h2 { font-size: 48px; }
+  h3 { font-size: 36px; }
+  h4 { font-size: 24px; font-weight: 600; }
+
+  p { font-size: 16px; line-height: 1.65; color: var(--gray-700); }
+
+  a { color: var(--brand-red); text-decoration: none; transition: color 0.2s var(--ease); }
+  a:hover { color: var(--brand-red-dark); }
+
+  /* ---------- Top Nav ---------- */
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 250, 247, 0.92);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .top-nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .top-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .top-nav-brand img { height: 28px; width: auto; }
+  .top-nav-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .top-nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-700);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  }
+  .top-nav-link:hover {
+    background: var(--paper-alt);
+    color: var(--ink);
+  }
+
+  /* ---------- Layout ---------- */
+  .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  .section {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .section:last-of-type { border-bottom: 0; }
+
+  .section-dark {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3,
+  .section-dark h4 { color: var(--paper); }
+  .section-dark p { color: var(--gray-300); }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .section-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--brand-red);
+    margin-bottom: 12px;
+  }
+  .section-dark .section-eyebrow { color: #ff6a6f; }
+
+  .section-title { max-width: 720px; }
+  .section-lede {
+    max-width: 520px;
+    font-size: 16px;
+    color: var(--gray-600);
+  }
+  .section-dark .section-lede { color: var(--gray-300); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 120px 0 96px;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(221, 19, 26, 0.08), transparent 60%),
+      radial-gradient(ellipse at 100% 20%, rgba(14, 42, 71, 0.06), transparent 60%),
+      var(--paper);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--brand-red);
+    padding: 8px 14px;
+    background: var(--brand-red-soft);
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--brand-red);
+    border-radius: 50%;
+  }
+  .hero h1 { font-size: 88px; line-height: 1.02; max-width: 900px; margin-bottom: 24px; }
+  .hero h1 em { font-style: italic; color: var(--brand-red); font-weight: 700; }
+  .hero-sub { font-size: 20px; max-width: 640px; color: var(--gray-600); margin-bottom: 40px; }
+  .hero-logo-plate {
+    margin-top: 64px;
+    padding: 56px;
+    background: #ffffff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-logo-plate img { max-width: 480px; width: 100%; height: auto; }
+
+  /* ---------- Logo Section ---------- */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .logo-card {
+    border-radius: var(--radius-lg);
+    padding: 56px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    border: 1px solid transparent;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .logo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .logo-card img,
+  .logo-card svg,
+  .logo-dark-svg { max-width: 320px; width: 100%; height: auto; display: block; }
+  .logo-card-light { background: #ffffff; border-color: var(--gray-200); }
+  .logo-card-dark { background: var(--ink); }
+  .logo-card-label {
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gray-500);
+    margin-top: 12px;
+  }
+
+  .logo-rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+  .rule-card {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+  .rule-card h4 { margin-bottom: 8px; }
+  .rule-card-sub { font-size: 14px; color: var(--gray-500); margin-bottom: 24px; }
+
+  /* Minimum size */
+  .min-size-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding: 24px;
+    background: var(--paper-alt);
+    border-radius: var(--radius-md);
+  }
+  .min-size-sample { text-align: center; }
+  .min-size-sample img { display: block; margin: 0 auto 8px; height: auto; }
+  .min-size-xs img { width: 80px; }
+  .min-size-sm img { width: 120px; }
+  .min-size-md img { width: 200px; }
+  .min-size-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .tag-ok { color: var(--success); }
+  .tag-no { color: var(--error); }
+  .tag-best { color: var(--brand-red); }
+
+  /* Clear space */
+  .clear-space-box {
+    position: relative;
+    padding: 64px;
+    background: var(--paper-alt);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clear-space-inner {
+    position: relative;
+    padding: 24px;
+    border: 2px dashed var(--brand-red);
+    border-radius: var(--radius-sm);
+  }
+  .clear-space-inner img { display: block; max-width: 260px; width: 100%; height: auto; }
+  .clear-space-inner::before,
+  .clear-space-inner::after {
+    content: "X";
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--brand-red);
+    background: var(--paper-alt);
+    padding: 0 6px;
+  }
+  .clear-space-inner::before { top: -14px; left: -12px; }
+  .clear-space-inner::after { bottom: -14px; right: -12px; }
+
+  /* Wrong usage */
+  .wrong-usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .wrong-card {
+    position: relative;
+    padding: 32px 20px;
+    border-radius: var(--radius-md);
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .wrong-card img { max-width: 80%; height: auto; display: block; }
+  .wrong-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--error);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .wrong-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    right: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-align: center;
+  }
+  .wrong-stretch img { transform: scaleX(1.6); }
+  .wrong-color img { filter: hue-rotate(120deg) saturate(1.2); }
+  .wrong-contrast { background: #4a1618; }
+  .wrong-contrast img { opacity: 0.35; filter: grayscale(0.4); }
+  .wrong-rotate img { transform: rotate(-18deg); }
+  .wrong-clutter {
+    background-image:
+      linear-gradient(45deg, #c7c7c7 25%, transparent 25%),
+      linear-gradient(-45deg, #c7c7c7 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #c7c7c7 75%),
+      linear-gradient(-45deg, transparent 75%, #c7c7c7 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+    background-color: #e0e0e0;
+  }
+
+  /* ---------- Color Palette ---------- */
+  .color-group { margin-bottom: 56px; }
+  .color-group-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+  }
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    background: #fff;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    cursor: pointer;
+  }
+  .swatch:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .swatch-color {
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+  .swatch-body { padding: 16px 18px 18px; }
+  .swatch-hex {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .swatch-rgb { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+  .swatch-usage { font-size: 13px; color: var(--gray-600); margin-top: 10px; line-height: 1.5; }
+  .text-light { color: #fff; }
+  .text-dark { color: var(--ink); }
+
+  /* ---------- Typography ---------- */
+  .type-scale-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+  .type-scale-table th,
+  .type-scale-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: middle;
+  }
+  .type-scale-table tr:last-child td { border-bottom: 0; }
+  .type-scale-table th {
+    background: var(--paper-alt);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gray-600);
+  }
+  .type-scale-table td { font-size: 14px; color: var(--gray-600); }
+  .type-scale-table td:first-child {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 16px;
+  }
+
+  .type-specimens { display: grid; gap: 32px; }
+  .type-specimen {
+    padding: 32px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+  }
+  .type-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    margin-bottom: 12px;
+  }
+  .type-display-h1 { font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 800; line-height: 1.05; color: var(--ink); }
+  .type-display-h2 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+  .type-display-h3 { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.15; color: var(--ink); }
+  .type-display-h4 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; line-height: 1.25; color: var(--ink); }
+  .type-display-body { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.65; color: var(--gray-700); }
+  .type-display-small { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.55; color: var(--gray-600); }
+  .type-display-caption { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; line-height: 1.45; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.12em; }
+
+  /* Dark section typography overrides — ensure readable contrast (>= 4.5:1) on dark cards */
+  .section-dark .type-specimen {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .section-dark .type-meta { color: #94a3b8; }
+  .section-dark .type-display-h1,
+  .section-dark .type-display-h2,
+  .section-dark .type-display-h3,
+  .section-dark .type-display-h4 { color: #f1f5f9; }
+  .section-dark .type-display-body { color: #f1f5f9; }
+  .section-dark .type-display-small { color: #cbd5e1; }
+  .section-dark .type-display-caption { color: #94a3b8; }
+
+  /* ---------- Spacing ---------- */
+  .spacing-visual {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  .grid-diagram {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .grid-cell {
+    aspect-ratio: 1;
+    background: var(--brand-red-soft);
+    border-radius: 2px;
+    transition: background 0.2s var(--ease);
+  }
+  .grid-cell:hover { background: var(--brand-red); }
+  .spacing-caption {
+    font-size: 13px;
+    color: var(--gray-500);
+    text-align: center;
+  }
+
+  .spacing-scale { display: grid; gap: 12px; }
+  .spacing-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 80px;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s var(--ease);
+  }
+  .spacing-row:hover { border-color: var(--brand-red); }
+  .spacing-token {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .spacing-bar {
+    background: var(--brand-red);
+    height: 16px;
+    border-radius: 2px;
+  }
+  .spacing-value { font-size: 13px; color: var(--gray-500); text-align: right; }
+
+  .spacing-example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .spacing-example {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+  .spacing-example h4 { margin-bottom: 8px; }
+  .spacing-example-body { font-size: 13px; color: var(--gray-500); margin-bottom: 24px; }
+  .mock-card {
+    padding: 24px;
+    background: var(--paper-alt);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--gray-300);
+  }
+  .mock-card-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; color: var(--ink); }
+  .mock-card-text { font-size: 13px; color: var(--gray-600); margin-bottom: 16px; }
+  .mock-section {
+    padding: 48px 24px;
+    background: var(--paper-alt);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+  .mock-section h4 { margin-bottom: 12px; }
+  .mock-section p { font-size: 14px; color: var(--gray-600); }
+
+  /* ---------- Components ---------- */
+  .components-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .component-block {
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+  .component-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gray-500);
+    margin-bottom: 20px;
+  }
+  .component-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    letter-spacing: 0.01em;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn:focus-visible { outline: 3px solid rgba(221, 19, 26, 0.3); outline-offset: 2px; }
+
+  .btn-primary { background: var(--brand-red); color: #fff; }
+  .btn-primary:hover { background: var(--brand-red-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(221, 19, 26, 0.3); }
+
+  .btn-secondary { background: var(--ink); color: #fff; }
+  .btn-secondary:hover { background: #000; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--gray-300); }
+  .btn-ghost:hover { background: var(--paper-alt); border-color: var(--ink); }
+
+  .btn-disabled { background: var(--gray-200); color: var(--gray-400); cursor: not-allowed; }
+  .btn-disabled:hover { transform: none; box-shadow: none; }
+
+  /* Inputs */
+  .input-group { display: grid; gap: 8px; max-width: 360px; }
+  .input-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .input-field {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    background: #fff;
+    color: var(--ink);
+    transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    width: 100%;
+  }
+  .input-field::placeholder { color: var(--gray-400); }
+  .input-field:hover { border-color: var(--gray-500); }
+  .input-field:focus {
+    outline: none;
+    border-color: var(--brand-red);
+    box-shadow: 0 0 0 4px rgba(221, 19, 26, 0.12);
+  }
+  .input-field-error { border-color: var(--error); }
+  .input-field-error:focus {
+    border-color: var(--error);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+  }
+  .input-help { font-size: 12px; color: var(--gray-500); }
+  .input-help-error { color: var(--error); font-weight: 500; }
+
+  .input-states-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s var(--ease);
+  }
+  .badge:hover { transform: translateY(-1px); }
+  .badge-red { background: var(--brand-red-soft); color: var(--brand-red-dark); }
+  .badge-ink { background: var(--gray-800); color: #fff; }
+  .badge-green { background: var(--pk-green-soft); color: var(--pk-green); }
+  .badge-success { background: #d1fae5; color: #065f46; }
+  .badge-warning { background: #fef3c7; color: #92400e; }
+  .badge-error { background: #fee2e2; color: #991b1b; }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    background: #fff;
+    transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+    cursor: pointer;
+  }
+  .tag:hover { border-color: var(--brand-red); color: var(--brand-red); }
+
+  /* Card */
+  .card-demo {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    max-width: 380px;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    cursor: pointer;
+  }
+  .card-demo:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .card-demo-image {
+    height: 180px;
+    background:
+      linear-gradient(135deg, rgba(221, 19, 26, 0.88), rgba(35, 35, 35, 0.9)),
+      radial-gradient(circle at 30% 40%, #fff 2px, transparent 3px),
+      radial-gradient(circle at 70% 60%, #fff 2px, transparent 3px);
+    background-size: cover, 40px 40px, 40px 40px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  .card-demo-image span {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    opacity: 0.9;
+  }
+  .card-demo-body { padding: 24px; }
+  .card-demo-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .card-demo-text { font-size: 14px; color: var(--gray-600); margin-bottom: 16px; }
+  .card-demo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-demo-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand-red);
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+    transition: gap 0.2s var(--ease);
+  }
+  .card-demo-link:hover { gap: 10px; }
+
+  /* ---------- Voice & Tone ---------- */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .voice-card {
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    background: #fff;
+    border: 1px solid var(--gray-200);
+  }
+  .voice-card h4 { margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .voice-do { border-top: 4px solid var(--success); }
+  .voice-dont { border-top: 4px solid var(--error); }
+  .voice-do h4::before { content: "✓"; color: var(--success); font-family: 'Inter', sans-serif; font-weight: 700; }
+  .voice-dont h4::before { content: "✕"; color: var(--error); font-family: 'Inter', sans-serif; font-weight: 700; }
+  .voice-list { list-style: none; display: grid; gap: 10px; }
+  .voice-list li {
+    font-size: 15px;
+    color: var(--gray-700);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .voice-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 2px;
+    background: var(--gray-400);
+  }
+  .voice-examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .voice-example-card {
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    background: #fff;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .voice-example-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .voice-example-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--brand-red);
+    margin-bottom: 12px;
+  }
+  .voice-example-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .voice-example-sub {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-top: 8px;
+  }
+  .voice-button-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .convention-block {
+    padding: 24px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: var(--radius-lg);
+    font-family: 'Menlo', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 24px;
+    overflow-x: auto;
+  }
+  .convention-block .cmt { color: var(--gray-400); }
+  .convention-block .ok { color: #5eead4; }
+  .convention-block .bad { color: #fda4af; text-decoration: line-through; }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    padding: 48px 32px;
+    background: var(--ink);
+    color: var(--gray-400);
+    text-align: center;
+    font-size: 13px;
+  }
+  .site-footer strong { color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .hero { padding: 72px 0 64px; }
+    .hero h1 { font-size: 48px; }
+    .hero-sub { font-size: 17px; }
+    h1 { font-size: 44px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 28px; }
+    h4 { font-size: 20px; }
+    .section { padding: 64px 0; }
+    .logo-grid,
+    .logo-rules-grid,
+    .spacing-example-grid,
+    .voice-grid { grid-template-columns: 1fr; }
+    .type-display-h1 { font-size: 44px; }
+    .type-display-h2 { font-size: 36px; }
+    .type-display-h3 { font-size: 28px; }
+    .hero-logo-plate { padding: 32px; }
+    .top-nav-links { display: none; }
+    .page-wrap { padding: 0 20px; }
+    .hero-inner { padding: 0 20px; }
+    .spacing-row { grid-template-columns: 90px 1fr 64px; }
+  }
+
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 38px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    .btn { padding: 12px 20px; font-size: 14px; }
+    .type-display-h1 { font-size: 36px; }
+    .min-size-row { gap: 20px; }
+    .type-specimen, .rule-card, .voice-card, .component-block { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== TOP NAV ==================== -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <div class="top-nav-brand">
+      <img src="Group-343.svg" alt="Senator logo" />
+      <span>Brand Guide</span>
+    </div>
+    <div class="top-nav-links">
+      <a class="top-nav-link" href="#logo-section">Logo</a>
+      <a class="top-nav-link" href="#color-section">Color</a>
+      <a class="top-nav-link" href="#type-section">Typography</a>
+      <a class="top-nav-link" href="#spacing-section">Spacing</a>
+      <a class="top-nav-link" href="#components-section">Components</a>
+      <a class="top-nav-link" href="#voice-section">Voice</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Brand Guidelines &middot; Version 1.0</span>
+    <h1>Leading Pakistan <em>Forward.</em></h1>
+    <p class="hero-sub">The official design system and brand standards for the Senator political platform. Authoritative. Trustworthy. Patriotic.</p>
+    <div class="hero-logo-plate">
+      <img src="Group-343.svg" alt="Senator official logo" />
+    </div>
+  </div>
+</header>
+
+<!-- ==================== LOGO ==================== -->
+<section class="section" id="logo-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">01 &mdash; Identity</div>
+        <h2>The Logo</h2>
+      </div>
+      <p class="section-lede">Our mark is the single most recognizable expression of the brand. Protect its form, its color, and its breathing room.</p>
+    </div>
+
+    <!-- Logo on light and dark -->
+    <div class="logo-grid">
+      <div>
+        <div class="logo-card logo-card-light">
+          <img src="Group-343.svg" alt="Senator logo on light background" />
+        </div>
+        <div class="logo-card-label">Primary &mdash; on light</div>
+      </div>
+      <div>
+        <div class="logo-card logo-card-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 327.485 65.371" class="logo-dark-svg" aria-label="Senator logo on dark background" role="img">
+            <g transform="translate(-219 -96.817)">
+              <g transform="translate(304.706 144.652)">
+                <path d="M121.623,183.55l2.344,6.289,6.705.286-5.257,4.173,1.8,6.466-5.593-3.71-5.593,3.71,1.8-6.466-5.257-4.173,6.705-.286Z" transform="translate(-112.574 -183.55)" fill="#dd131a"/>
+                <path d="M121.623,183.55l2.344,6.289,6.705.286-5.257,4.173,1.8,6.466-5.593-3.71-5.593,3.71,1.8-6.466-5.257-4.173,6.705-.286Z" transform="translate(-84.938 -183.55)" fill="#dd131a"/>
+                <path d="M121.623,183.55l2.344,6.289,6.705.286-5.257,4.173,1.8,6.466-5.593-3.71-5.593,3.71,1.8-6.466-5.257-4.173,6.705-.286Z" transform="translate(-57.302 -183.55)" fill="#dd131a"/>
+              </g>
+              <path d="M6266.871,2727.651v-35.036h-65.044V2734.3h11.68v-30.006h41.686v11.677h-30.009v30.008h-23.356v11.679h35.035v-21.751l21.75,21.751h8.259V2749.4l-18.912-18.913-2.839-2.837Z" transform="translate(-5982.827 -2595.47)" fill="#dd131a" fill-rule="evenodd"/>
+              <g transform="translate(304.738 96.817)">
+                <path d="M-189.864,605.936a3.667,3.667,0,0,0-1.273-2.974,15.459,15.459,0,0,0-4.473-2.205,41.421,41.421,0,0,1-5.232-2.206q-6.61-3.444-6.61-9.466a8.835,8.835,0,0,1,1.647-5.291,10.71,10.71,0,0,1,4.66-3.568,17.209,17.209,0,0,1,6.773-1.276,15.084,15.084,0,0,1,6.575,1.388,10.579,10.579,0,0,1,4.519,3.953,10.784,10.784,0,0,1,1.612,5.861h-8.175a4.5,4.5,0,0,0-1.273-3.42,4.786,4.786,0,0,0-3.445-1.214,5.365,5.365,0,0,0-3.469,1.028,3.217,3.217,0,0,0-1.273,2.615,3.219,3.219,0,0,0,1.4,2.515A17.194,17.194,0,0,0-192.97,594a29.306,29.306,0,0,1,5.793,2.589q5.512,3.371,5.512,9.293a9.013,9.013,0,0,1-3.363,7.435q-3.364,2.7-9.226,2.7a17.4,17.4,0,0,1-7.486-1.574,11.449,11.449,0,0,1-5.045-4.312,11.743,11.743,0,0,1-1.693-6.307h8.222a5.731,5.731,0,0,0,1.413,4.275q1.413,1.375,4.59,1.375a5.055,5.055,0,0,0,3.212-.929A3.138,3.138,0,0,0-189.864,605.936Z" transform="translate(208.479 -578.949)" fill="#ffffff"/>
+                <path d="M-30.044,602.117H-42.938v8.638h15.229v6.7H-51.136V581.318h23.474v6.727H-42.938v7.62h12.893Z" transform="translate(82.154 -580.851)" fill="#ffffff"/>
+                <path d="M113.047,617.457H104.9L92.843,594.969v22.487h-8.2V581.318h8.2l12.029,22.487V581.318h8.175Z" transform="translate(-26.859 -580.851)" fill="#ffffff"/>
+                <path d="M265.722,610.705H254.487l-1.962,6.751h-8.759l12.473-36.139h7.708l12.566,36.139h-8.806Zm-9.273-6.726h7.311l-3.667-12.534Z" transform="translate(-154.612 -580.851)" fill="#ffffff"/>
+                <path d="M427.877,588.045H417.67v29.412h-8.2V588.045h-10.02v-6.727h28.426Z" transform="translate(-279.605 -580.851)" fill="#ffffff"/>
+                <path d="M582.76,598.229a22.388,22.388,0,0,1-1.845,9.343,14.219,14.219,0,0,1-5.244,6.257,13.966,13.966,0,0,1-7.743,2.193,13.783,13.783,0,0,1-12.951-8.178A21.7,21.7,0,0,1,553,598.8v-2.032a22.481,22.481,0,0,1,1.834-9.355,13.845,13.845,0,0,1,13.045-8.463,13.931,13.931,0,0,1,7.708,2.181,14.431,14.431,0,0,1,5.267,6.208,21.826,21.826,0,0,1,1.9,9.231Zm-8.338-1.512q0-5.377-1.693-8.166a5.364,5.364,0,0,0-4.847-2.788q-6.166,0-6.517,9.813l-.023,2.652q0,5.3,1.658,8.153a5.358,5.358,0,0,0,4.928,2.85,5.3,5.3,0,0,0,4.788-2.8q1.682-2.8,1.705-8.054Z" transform="translate(-402.886 -578.949)" fill="#ffffff"/>
+                <path d="M738.032,604.674h-4.438v12.782h-8.2V581.318H738.78q6.049,0,9.46,2.852a9.92,9.92,0,0,1,3.41,8.058,12.314,12.314,0,0,1-1.437,6.248,10.387,10.387,0,0,1-4.5,4.017l7.1,14.592v.373h-8.782Zm-4.438-6.7h5.185a4.5,4.5,0,0,0,3.515-1.306,5.248,5.248,0,0,0,1.18-3.645,5.308,5.308,0,0,0-1.191-3.67,4.459,4.459,0,0,0-3.5-1.331h-5.185Z" transform="translate(-541.294 -580.851)" fill="#ffffff"/>
+                <path d="M879.7,597l6.26-15.687h8.852l-10.955,23.157v12.981h-8.315V604.475l-10.931-23.157h8.806Z" transform="translate(-653.065 -580.851)" fill="#ffffff"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-card-label">Reversed &mdash; on dark</div>
+      </div>
+    </div>
+
+    <!-- Rules: min size + clear space -->
+    <div class="logo-rules-grid">
+      <div class="rule-card">
+        <h4>Minimum Size</h4>
+        <p class="rule-card-sub">Never render the logo smaller than 120px wide on digital surfaces. Legibility is non-negotiable.</p>
+        <div class="min-size-row">
+          <div class="min-size-sample min-size-xs">
+            <img src="Group-343.svg" alt="Logo at 80px" />
+            <div class="min-size-tag tag-no">80px &mdash; not allowed</div>
+          </div>
+          <div class="min-size-sample min-size-sm">
+            <img src="Group-343.svg" alt="Logo at 120px minimum" />
+            <div class="min-size-tag tag-ok">120px &mdash; minimum</div>
+          </div>
+          <div class="min-size-sample min-size-md">
+            <img src="Group-343.svg" alt="Logo at 200px recommended" />
+            <div class="min-size-tag tag-best">200px &mdash; recommended</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rule-card">
+        <h4>Clear Space</h4>
+        <p class="rule-card-sub">Keep a padding equal to the height of one star (X) on every side. No text, no imagery, no edges inside this zone.</p>
+        <div class="clear-space-box">
+          <div class="clear-space-inner">
+            <img src="Group-343.svg" alt="Logo with clear space" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wrong usage -->
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">Do not</div>
+        <h3>Incorrect Usage</h3>
+      </div>
+      <p class="section-lede">These treatments damage brand integrity. None are permitted in any context.</p>
+    </div>
+
+    <div class="wrong-usage-grid">
+      <div class="wrong-card wrong-stretch">
+        <span class="wrong-badge">!</span>
+        <img src="Group-343.svg" alt="Stretched logo" />
+        <span class="wrong-label">Do not stretch</span>
+      </div>
+      <div class="wrong-card wrong-color">
+        <span class="wrong-badge">!</span>
+        <img src="Group-343.svg" alt="Recolored logo" />
+        <span class="wrong-label">Do not change colors</span>
+      </div>
+      <div class="wrong-card wrong-contrast">
+        <span class="wrong-badge">!</span>
+        <img src="Group-343.svg" alt="Low contrast logo" />
+        <span class="wrong-label">Do not use low contrast</span>
+      </div>
+      <div class="wrong-card wrong-rotate">
+        <span class="wrong-badge">!</span>
+        <img src="Group-343.svg" alt="Rotated logo" />
+        <span class="wrong-label">Do not rotate</span>
+      </div>
+      <div class="wrong-card wrong-clutter">
+        <span class="wrong-badge">!</span>
+        <img src="Group-343.svg" alt="Logo on cluttered background" />
+        <span class="wrong-label">Do not place on busy backgrounds</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COLOR ==================== -->
+<section class="section" id="color-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">02 &mdash; Color</div>
+        <h2>Color Palette</h2>
+      </div>
+      <p class="section-lede">A restrained, confident palette. Brand Red carries identity. Ink grounds us. Patriot Green signals nation. Neutrals carry the page.</p>
+    </div>
+
+    <!-- Primary -->
+    <div class="color-group">
+      <div class="color-group-title">Primary &mdash; extracted from the logo</div>
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #dd131a;">Brand Red</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#DD131A</div>
+            <div class="swatch-rgb">rgb(221, 19, 26)</div>
+            <div class="swatch-usage">Hero accents, primary CTAs, links, highlights. The voice of the brand. Use with discipline.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #232323;">Ink</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#232323</div>
+            <div class="swatch-rgb">rgb(35, 35, 35)</div>
+            <div class="swatch-usage">Headlines, body text, high-contrast surfaces. Softer than pure black &mdash; keeps the brand modern.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary -->
+    <div class="color-group">
+      <div class="color-group-title">Secondary &mdash; patriotic accents</div>
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #01411c;">Patriot Green</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#01411C</div>
+            <div class="swatch-rgb">rgb(1, 65, 28)</div>
+            <div class="swatch-usage">Supporting accent that echoes the national flag. For section dividers, subtle highlights, and secondary CTAs.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #0e2a47;">Civic Navy</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#0E2A47</div>
+            <div class="swatch-rgb">rgb(14, 42, 71)</div>
+            <div class="swatch-usage">Institutional tone for reports, data, official statements. Adds depth next to Brand Red.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #fbe5e6;">Red Tint</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#FBE5E6</div>
+            <div class="swatch-rgb">rgb(251, 229, 230)</div>
+            <div class="swatch-usage">Soft surfaces, badge backgrounds, subtle callouts. Keeps red in the story without shouting.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neutrals -->
+    <div class="color-group">
+      <div class="color-group-title">Neutrals</div>
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #ffffff; border-bottom: 1px solid var(--gray-200);">Paper White</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-rgb">rgb(255, 255, 255)</div>
+            <div class="swatch-usage">Primary card and surface background.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #fafaf7;">Paper</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#FAFAF7</div>
+            <div class="swatch-rgb">rgb(250, 250, 247)</div>
+            <div class="swatch-usage">Page background. Warmer than pure white &mdash; easier on long reads.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #f1f1ef;">Gray 100</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#F1F1EF</div>
+            <div class="swatch-rgb">rgb(241, 241, 239)</div>
+            <div class="swatch-usage">Subtle section tints, alternate rows, hover states.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #d4d4d0;">Gray 300</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#D4D4D0</div>
+            <div class="swatch-rgb">rgb(212, 212, 208)</div>
+            <div class="swatch-usage">Dividers, input borders, disabled outlines.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #737373;">Gray 500</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#737373</div>
+            <div class="swatch-rgb">rgb(115, 115, 115)</div>
+            <div class="swatch-usage">Secondary text, metadata, captions.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #404040;">Gray 700</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#404040</div>
+            <div class="swatch-rgb">rgb(64, 64, 64)</div>
+            <div class="swatch-usage">Body copy on light surfaces. Less heavy than Ink.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="color-group">
+      <div class="color-group-title">Status &mdash; system feedback</div>
+      <div class="color-grid">
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #10b981;">Success</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#10B981</div>
+            <div class="swatch-rgb">rgb(16, 185, 129)</div>
+            <div class="swatch-usage">Confirmations, completed actions, positive results.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-light" style="background: #ef4444;">Error</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#EF4444</div>
+            <div class="swatch-rgb">rgb(239, 68, 68)</div>
+            <div class="swatch-usage">Validation failures, destructive confirmations, critical alerts.</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color text-dark" style="background: #f59e0b;">Warning</div>
+          <div class="swatch-body">
+            <div class="swatch-hex">#F59E0B</div>
+            <div class="swatch-rgb">rgb(245, 158, 11)</div>
+            <div class="swatch-usage">Cautions, pending states, actions requiring attention.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TYPOGRAPHY ==================== -->
+<section class="section section-dark" id="type-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">03 &mdash; Typography</div>
+        <h2>Typography</h2>
+      </div>
+      <p class="section-lede">Playfair Display carries gravity in headlines. Inter carries clarity in running text. Together they read as institutional, current, and confident.</p>
+    </div>
+
+    <table class="type-scale-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Font</th>
+          <th>Size</th>
+          <th>Weight</th>
+          <th>Line height</th>
+          <th>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>heading-1</td><td>Playfair Display</td><td>64px</td><td>800</td><td>1.05</td><td>Hero headlines, campaign slogans</td></tr>
+        <tr><td>heading-2</td><td>Playfair Display</td><td>48px</td><td>700</td><td>1.10</td><td>Section titles</td></tr>
+        <tr><td>heading-3</td><td>Playfair Display</td><td>36px</td><td>700</td><td>1.15</td><td>Sub-sections, feature titles</td></tr>
+        <tr><td>heading-4</td><td>Playfair Display</td><td>24px</td><td>600</td><td>1.25</td><td>Card titles, UI headings</td></tr>
+        <tr><td>body</td><td>Inter</td><td>16px</td><td>400</td><td>1.65</td><td>Standard running text</td></tr>
+        <tr><td>body-small</td><td>Inter</td><td>14px</td><td>400</td><td>1.55</td><td>Secondary content, descriptions</td></tr>
+        <tr><td>caption</td><td>Inter</td><td>12px</td><td>500</td><td>1.45</td><td>Metadata, labels, legal</td></tr>
+      </tbody>
+    </table>
+
+    <div class="type-specimens">
+      <div class="type-specimen">
+        <div class="type-meta">H1 &middot; Playfair Display 64 / 800</div>
+        <div class="type-display-h1">Leading Pakistan Forward.</div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">H2 &middot; Playfair Display 48 / 700</div>
+        <div class="type-display-h2">One Nation. One Voice. One Future.</div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">H3 &middot; Playfair Display 36 / 700</div>
+        <div class="type-display-h3">A plan built for every province.</div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">H4 &middot; Playfair Display 24 / 600</div>
+        <div class="type-display-h4">Policy priorities for the next term</div>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">Body &middot; Inter 16 / 400</div>
+        <p class="type-display-body">We stand for a stronger economy, transparent governance, and opportunity in every district. Our platform is specific, our commitments are public, and our record is on the ballot. Read the plan, join the movement, and help us deliver results the nation can measure.</p>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">Small &middot; Inter 14 / 400</div>
+        <p class="type-display-small">Supporting note: details, secondary context, and footnotes use this size to stay readable without competing with the main copy.</p>
+      </div>
+      <div class="type-specimen">
+        <div class="type-meta">Caption &middot; Inter 12 / 500</div>
+        <div class="type-display-caption">Paid for by the Senator Campaign Committee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SPACING ==================== -->
+<section class="section" id="spacing-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">04 &mdash; Layout</div>
+        <h2>Spacing &amp; Grid</h2>
+      </div>
+      <p class="section-lede">An 8-pixel base grid. Every padding, margin, and gap is a multiple of 8. Small details (4px) are the only exception, for fine-tuning within components.</p>
+    </div>
+
+    <div class="spacing-visual">
+      <div class="grid-diagram" id="grid-diagram-demo"></div>
+      <div class="spacing-caption">8px base grid &mdash; hover the cells. Every spatial decision traces back to this.</div>
+    </div>
+
+    <div class="spacing-scale" id="spacing-scale">
+      <div class="spacing-row">
+        <span class="spacing-token">space-1</span>
+        <div class="spacing-bar" style="width: 4px;"></div>
+        <span class="spacing-value">4px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-2</span>
+        <div class="spacing-bar" style="width: 8px;"></div>
+        <span class="spacing-value">8px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-4</span>
+        <div class="spacing-bar" style="width: 16px;"></div>
+        <span class="spacing-value">16px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-6</span>
+        <div class="spacing-bar" style="width: 24px;"></div>
+        <span class="spacing-value">24px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-8</span>
+        <div class="spacing-bar" style="width: 32px;"></div>
+        <span class="spacing-value">32px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-12</span>
+        <div class="spacing-bar" style="width: 48px;"></div>
+        <span class="spacing-value">48px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-token">space-16</span>
+        <div class="spacing-bar" style="width: 64px;"></div>
+        <span class="spacing-value">64px</span>
+      </div>
+    </div>
+
+    <div class="spacing-example-grid">
+      <div class="spacing-example">
+        <h4>Card Spacing</h4>
+        <p class="spacing-example-body">Internal padding: 24px (space-6). Gap between stacked elements: 16px (space-4).</p>
+        <div class="mock-card">
+          <div class="mock-card-title">Policy Update</div>
+          <div class="mock-card-text">Our economic framework now includes three new provincial pilots launching next quarter.</div>
+          <button class="btn btn-primary">Read The Plan</button>
+        </div>
+      </div>
+      <div class="spacing-example">
+        <h4>Section Spacing</h4>
+        <p class="spacing-example-body">Between sections: 96px desktop, 64px mobile. Between section title and body: 48px.</p>
+        <div class="mock-section">
+          <h4>A Stronger Pakistan</h4>
+          <p>Dedicated vertical rhythm keeps dense policy content readable at every screen size.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COMPONENTS ==================== -->
+<section class="section" id="components-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">05 &mdash; Components</div>
+        <h2>UI Components</h2>
+      </div>
+      <p class="section-lede">Every interactive element responds to hover and focus. Components are small, purposeful, and composable.</p>
+    </div>
+
+    <div class="components-grid">
+
+      <!-- Buttons -->
+      <div class="component-block">
+        <div class="component-label">Buttons</div>
+        <div class="component-row">
+          <button class="btn btn-primary">Join The Movement</button>
+          <button class="btn btn-secondary">Read The Plan</button>
+          <button class="btn btn-ghost">Learn More</button>
+          <button class="btn btn-disabled" disabled>Submitting</button>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <div class="component-block">
+        <div class="component-label">Input Fields</div>
+        <div class="input-states-grid">
+          <div class="input-group">
+            <label class="input-label" for="input-default">Full name</label>
+            <input class="input-field" id="input-default" type="text" placeholder="Enter your full name" />
+            <span class="input-help">As it appears on your national ID.</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="input-focus">Email address</label>
+            <input class="input-field" id="input-focus" type="email" placeholder="name@example.com" />
+            <span class="input-help">Focus this field to see the active state.</span>
+          </div>
+          <div class="input-group">
+            <label class="input-label" for="input-error">Mobile number</label>
+            <input class="input-field input-field-error" id="input-error" type="tel" value="0300" />
+            <span class="input-help input-help-error">Enter a valid 11-digit mobile number.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges & tags -->
+      <div class="component-block">
+        <div class="component-label">Badges</div>
+        <div class="component-row">
+          <span class="badge badge-red">Official</span>
+          <span class="badge badge-ink">Senator</span>
+          <span class="badge badge-green">Verified</span>
+          <span class="badge badge-success">Active</span>
+          <span class="badge badge-warning">Pending</span>
+          <span class="badge badge-error">Urgent</span>
+        </div>
+        <div class="component-label" style="margin-top: 28px;">Tags</div>
+        <div class="component-row">
+          <a class="tag" href="#economy">Economy</a>
+          <a class="tag" href="#education">Education</a>
+          <a class="tag" href="#healthcare">Healthcare</a>
+          <a class="tag" href="#infrastructure">Infrastructure</a>
+          <a class="tag" href="#youth">Youth</a>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="component-block">
+        <div class="component-label">Card</div>
+        <div class="card-demo">
+          <div class="card-demo-image">
+            <span>Policy Brief</span>
+          </div>
+          <div class="card-demo-body">
+            <div class="card-demo-title">A Stronger Economy For Every Province</div>
+            <div class="card-demo-text">Our five-point economic plan focuses on jobs, exports, and transparent public spending &mdash; measurable from day one.</div>
+            <div class="card-demo-footer">
+              <span class="badge badge-red">New</span>
+              <a class="card-demo-link" href="#plan">Read plan &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VOICE ==================== -->
+<section class="section" id="voice-section">
+  <div class="page-wrap">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-eyebrow">06 &mdash; Voice</div>
+        <h2>Voice &amp; Tone</h2>
+      </div>
+      <p class="section-lede">Authoritative. Trustworthy. Patriotic. We speak in English only, we speak in short sentences, and we speak with conviction.</p>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card voice-do">
+        <h4>Do</h4>
+        <ul class="voice-list">
+          <li>Write in English only, across every surface.</li>
+          <li>Use short, declarative sentences. Subject, verb, point.</li>
+          <li>Lead with conviction &mdash; state the stance, then the proof.</li>
+          <li>Speak as one national voice, not as an individual.</li>
+          <li>Prefer specific, measurable claims over abstractions.</li>
+          <li>Use active voice. Attribute actions to the movement.</li>
+        </ul>
+      </div>
+      <div class="voice-card voice-dont">
+        <h4>Don't</h4>
+        <ul class="voice-list">
+          <li>Do not mix Urdu, Roman Urdu, or regional languages into copy.</li>
+          <li>Avoid casual language, slang, or internet shorthand.</li>
+          <li>No hedging &mdash; skip "maybe," "sort of," "we think."</li>
+          <li>Do not use exclamation marks to manufacture energy.</li>
+          <li>No empty adjectives: "amazing," "incredible," "world-class."</li>
+          <li>Do not borrow the tone of opponents or tabloid headlines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="voice-examples">
+
+      <div class="voice-example-card">
+        <div class="voice-example-tag">Headline &mdash; bold, direct</div>
+        <div class="voice-example-text">Leading Pakistan Forward.</div>
+        <div class="voice-example-sub">Subject. Direction. Full stop. No qualifiers.</div>
+      </div>
+
+      <div class="voice-example-card">
+        <div class="voice-example-tag">Tagline &mdash; rhythmic, patriotic</div>
+        <div class="voice-example-text">One Nation. One Voice. One Future.</div>
+        <div class="voice-example-sub">Three beats. Parallel structure. Works on a poster, a tee, or a banner.</div>
+      </div>
+
+      <div class="voice-example-card">
+        <div class="voice-example-tag">Body copy &mdash; clear, factual</div>
+        <p class="type-display-body" style="color: var(--gray-700);">We will invest in every province. We will publish our budget in full. We will hold every commitment to a public deadline. That is the standard. That is the promise.</p>
+        <div class="voice-example-sub" style="margin-top: 12px;">Short sentences. Active verbs. No fluff. Every claim is specific.</div>
+      </div>
+
+      <div class="voice-example-card">
+        <div class="voice-example-tag">Buttons &mdash; action-oriented</div>
+        <div class="voice-button-examples">
+          <button class="btn btn-primary">Join The Movement</button>
+          <button class="btn btn-primary">Take Action Now</button>
+          <button class="btn btn-secondary">Read The Plan</button>
+          <button class="btn btn-ghost">Volunteer Today</button>
+          <button class="btn btn-ghost">Donate</button>
+        </div>
+        <div class="voice-example-sub" style="margin-top: 16px;">Every label begins with a verb. Title case. No more than four words.</div>
+      </div>
+
+      <div class="voice-example-card">
+        <div class="voice-example-tag">Naming convention &mdash; kebab-case</div>
+        <div class="convention-block">
+          <span class="cmt">/* CSS classes */</span><br />
+          <span class="ok">.hero-section</span>, <span class="ok">.btn-primary</span>, <span class="ok">.card-policy-brief</span><br />
+          <span class="bad">.HeroSection</span>, <span class="bad">.btnPrimary</span>, <span class="bad">.card_policy</span><br /><br />
+          <span class="cmt">/* HTML ids */</span><br />
+          <span class="ok">id="top-nav"</span>, <span class="ok">id="join-form"</span>, <span class="ok">id="policy-section"</span><br />
+          <span class="bad">id="topNav"</span>, <span class="bad">id="JoinForm"</span>, <span class="bad">id="policy_section"</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <p><strong>Senator</strong> &middot; Brand Guide v1.0 &middot; Leading Pakistan Forward.</p>
+</footer>
+
+<script>
+  // Build the 8px grid diagram dynamically (48 cells total — 3 rows of 16)
+  (function buildGrid() {
+    var container = document.getElementById('grid-diagram-demo');
+    if (!container) return;
+    var total = 48;
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < total; i++) {
+      var cell = document.createElement('div');
+      cell.className = 'grid-cell';
+      frag.appendChild(cell);
+    }
+    container.appendChild(frag);
+  })();
+</script>
+
+</body>
+</html>
