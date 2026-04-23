@@ -12,7 +12,9 @@ out
 build
 
 # env
-.env*.local
+.env
+.env.local
+.env.*
 
 # misc
 .DS_Store
