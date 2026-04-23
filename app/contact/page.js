@@ -1,33 +1,33 @@
-import { Mail, Phone, MapPin } from "lucide-react";
-import { Navbar } from "@/components/navbar/navbar";
-import { Footer } from "@/components/footer/footer";
-import { PageHero } from "@/components/page-hero";
-import { ContactForm } from "@/components/contact-form";
-import { FaqAccordion } from "@/components/faq-accordion";
+import { Mail, Phone, MapPin } from 'lucide-react'
+import { Navbar } from '@/components/navbar/navbar'
+import { Footer } from '@/components/footer/footer'
+import { PageHero } from '@/components/page-hero'
+import { ContactForm } from '@/components/contact-form'
+import { FaqAccordion } from '@/components/faq-accordion'
 
 export const metadata = {
-  title: "Contact — Senator Campaign",
-  description: "Get in touch with the campaign. Media inquiries, volunteer questions, and speaking requests welcome.",
-};
+  title: 'Contact — Senator Campaign',
+  description: 'Get in touch with the campaign. Media inquiries, volunteer questions, and speaking requests welcome.',
+}
 
 const faq = [
   {
-    q: "How can I volunteer for the campaign?",
-    a: "Visit our volunteer page to sign up for door knocking, phone banking, event help, and more. We welcome all skill levels and availability — on-site training is provided.",
+    q: 'How can I volunteer for the campaign?',
+    a: 'Visit our volunteer page to sign up for door knocking, phone banking, event help, and more. We welcome all skill levels and availability — on-site training is provided.',
   },
   {
-    q: "How do I request a yard sign?",
-    a: "Yard signs are available at any campaign event or by request via the form above. We deliver within the district for orders of five or more.",
+    q: 'How do I request a yard sign?',
+    a: 'Yard signs are available at any campaign event or by request via the form above. We deliver within the district for orders of five or more.',
   },
   {
-    q: "Can I schedule the candidate for a speaking engagement?",
-    a: "For media inquiries and speaking requests, please use the contact form above or email press@senatorycampaign.com with your event details, expected audience, and proposed dates.",
+    q: 'Can I schedule the candidate for a speaking engagement?',
+    a: 'For media inquiries and speaking requests, please use the contact form above or email press@senatorycampaign.com with your event details, expected audience, and proposed dates.',
   },
   {
-    q: "Where does campaign funding go?",
-    a: "100% of contributions fund grassroots organizing — staff, travel, digital, canvassing supplies, and venue costs. We accept no corporate PAC money. Quarterly financial reports are filed with the FEC and posted publicly.",
+    q: 'Where does campaign funding go?',
+    a: '100% of contributions fund grassroots organizing — staff, travel, digital, canvassing supplies, and venue costs. We accept no corporate PAC money. Quarterly financial reports are filed with the FEC and posted publicly.',
   },
-];
+]
 
 export default function ContactPage() {
   return (
@@ -86,6 +86,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-heading font-bold text-ink text-lg mb-1">Location</h3>
                       <p className="text-sm text-gray-700 leading-relaxed">
+                        Senator Campaign Committee<br />
                         Campaign HQ<br />
                         1200 SW Main St<br />
                         Portland, OR 97205
@@ -117,5 +118,5 @@ export default function ContactPage() {
       </main>
       <Footer />
     </>
-  );
+  )
 }

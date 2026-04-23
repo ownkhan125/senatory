@@ -1,35 +1,33 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Heart, Shield } from "lucide-react";
+import { useState } from 'react'
+import { Heart, Shield } from 'lucide-react'
 
-const preset_amounts = [25, 50, 100, 250, 500, 1000];
+const presetAmounts = [25, 50, 100, 250, 500, 1000]
 
 export function DonationSection() {
-  const [selected, set_selected] = useState(100);
-  const [custom, set_custom] = useState("");
+  const [selected, setSelected] = useState(100)
+  const [custom, setCustom] = useState('')
 
-  const on_preset = (value) => {
-    set_selected(value);
-    set_custom("");
-  };
+  const onPreset = (value) => {
+    setSelected(value)
+    setCustom('')
+  }
 
-  const on_custom = (e) => {
-    const v = e.target.value.replace(/[^0-9]/g, "");
-    set_custom(v);
-    set_selected(null);
-  };
+  const onCustom = (e) => {
+    const v = e.target.value.replace(/[^0-9]/g, '')
+    setCustom(v)
+    setSelected(null)
+  }
 
-  const amount = custom !== "" ? Number(custom) : selected;
-  const amount_valid = Number.isFinite(amount) && amount >= 5;
+  const amount = custom !== '' ? Number(custom) : selected
+  const amountValid = Number.isFinite(amount) && amount >= 5
 
-  const handle_donate = (e) => {
-    e.preventDefault();
-    if (!amount_valid) return;
-    // Payment gateway integration goes here.
-    // For now, surface the selected amount in an alert hook.
-    alert(`Thank you — redirecting to secure checkout for $${amount.toLocaleString()}`);
-  };
+  const handleDonate = (e) => {
+    e.preventDefault()
+    if (!amountValid) return
+    alert(`Thank you — redirecting to secure checkout for $${amount.toLocaleString()}`)
+  }
 
   return (
     <section id="donate" className="relative bg-paper py-20 md:py-28 overflow-hidden">
@@ -64,29 +62,29 @@ export function DonationSection() {
           </div>
 
           <form
-            onSubmit={handle_donate}
+            onSubmit={handleDonate}
             className="bg-white border border-gray-200 rounded-brand-lg p-5 sm:p-6 md:p-8 shadow-brand-lg"
           >
             <p className="font-heading font-semibold text-ink text-lg mb-4">
               Choose an amount (USD)
             </p>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-5">
-              {preset_amounts.map((v) => {
-                const active = selected === v && custom === "";
+              {presetAmounts.map((v) => {
+                const active = selected === v && custom === ''
                 return (
                   <button
                     type="button"
                     key={v}
-                    onClick={() => on_preset(v)}
+                    onClick={() => onPreset(v)}
                     className={`py-3 sm:py-3.5 rounded-brand-md font-heading font-bold text-base sm:text-lg tabular-nums transition-all duration-200 ease-brand border-[1.5px] ${
                       active
-                        ? "bg-brand-red border-brand-red text-white shadow-brand-red-glow"
-                        : "bg-white border-gray-300 text-ink hover:border-brand-red hover:text-brand-red"
+                        ? 'bg-brand-red border-brand-red text-white shadow-brand-red-glow'
+                        : 'bg-white border-gray-300 text-ink hover:border-brand-red hover:text-brand-red'
                     }`}
                   >
                     {v.toLocaleString()}
                   </button>
-                );
+                )
               })}
             </div>
 
@@ -102,7 +100,7 @@ export function DonationSection() {
                   type="text"
                   inputMode="numeric"
                   value={custom}
-                  onChange={on_custom}
+                  onChange={onCustom}
                   placeholder="0"
                   className="w-full bg-white text-ink font-body text-base pl-8 pr-4 py-3 rounded-brand-md border-[1.5px] border-gray-300 placeholder:text-gray-400 focus:border-brand-red focus:outline-none focus:ring-4 focus:ring-brand-red/15 transition-all duration-300 ease-brand tabular-nums"
                 />
@@ -111,11 +109,11 @@ export function DonationSection() {
 
             <button
               type="submit"
-              disabled={!amount_valid}
+              disabled={!amountValid}
               className="w-full inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-dark active:bg-brand-red-dark disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-brand-red text-white text-base font-semibold px-7 py-3.5 rounded-brand-md transition-all duration-300 ease-brand hover:-translate-y-0.5 hover:shadow-brand-red-glow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-red/30"
             >
               <Heart size={18} />
-              Donate {amount_valid ? `$${amount.toLocaleString()}` : "Now"}
+              Donate {amountValid ? `$${amount.toLocaleString()}` : 'Now'}
             </button>
 
             <p className="mt-4 text-[11px] leading-relaxed text-gray-500 text-center">
@@ -125,5 +123,5 @@ export function DonationSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

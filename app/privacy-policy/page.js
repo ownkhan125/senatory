@@ -1,9 +1,9 @@
-import { LegalLayout } from "@/components/legal-layout";
+import { LegalLayout } from '@/components/legal-layout'
 
 export const metadata = {
-  title: "Privacy Policy — Senator Campaign",
-  description: "How the Senator Campaign Committee collects, uses, and protects your information.",
-};
+  title: 'Privacy Policy — Senator Campaign',
+  description: 'How the Senator Campaign Committee collects, uses, and protects your information.',
+}
 
 export default function PrivacyPolicyPage() {
   return (
@@ -46,16 +46,22 @@ export default function PrivacyPolicyPage() {
       </ul>
 
       <h2>4. SMS / Text Messaging Privacy</h2>
-      <h3>What We Collect</h3>
-      <p>When you opt in to receive text messages, we collect your phone number, your opt-in consent record, and your message preferences.</p>
-      <h3>How Your Phone Number Is Used</h3>
-      <p>Your phone number is used solely to send you the messages you have opted in to receive — shift reminders, event updates, and fundraising appeals.</p>
+      <h3>What Phone Numbers Are Collected For</h3>
+      <p>When you opt in to receive text messages from Senator Campaign Committee, we collect your phone number, your opt-in consent record (date, time, source form, and IP address), and your message preferences (informational updates, promotional/fundraising messages, or both).</p>
+      <h3>How Your Phone Number Is Used for SMS Messaging</h3>
+      <p>Your phone number is used solely to send you the SMS messages you have opted in to receive from Senator Campaign Committee. We do not use your phone number for any purpose other than the SMS program you consented to.</p>
+      <h3>Types of Messages You Will Receive</h3>
+      <p>Depending on which consent box(es) you checked, messages may include: shift reminders, event updates, volunteer coordination, get-out-the-vote reminders, fundraising appeals, donation drives, and general campaign communications from Senator Campaign Committee.</p>
+      <h3>How Long Phone Number and Consent Data Is Retained</h3>
+      <p>Senator Campaign Committee retains your phone number and associated SMS consent records for the duration of the campaign cycle and for as long as required by applicable federal and state law (including FEC recordkeeping obligations). When retention is no longer required, the data is securely deleted.</p>
+      <h3>How You Can Request Data Deletion</h3>
+      <p>You may request deletion of your phone number and SMS consent data at any time by emailing <a href="mailto:privacy@senatorycampaign.com">privacy@senatorycampaign.com</a> or calling +1 (503) 555-0100. Deletion requests are processed within 10 business days.</p>
       <h3>No Third-Party Sharing</h3>
-      <p>We do not share, sell, or rent your phone number or SMS consent data with third parties for their marketing purposes.</p>
-      <h3>Data Retention</h3>
-      <p>We retain SMS records for the duration of the campaign and as required by applicable law. You may request deletion at any time.</p>
+      <p>
+        <strong>We will not share or sell your text messaging opt-in data, consent, or related personal information with any third parties, unless required by law.</strong>
+      </p>
       <h3>Opt-Out</h3>
-      <p>Reply STOP to any campaign text message to unsubscribe. Reply HELP for help. Message frequency varies. Message and data rates may apply.</p>
+      <p>Reply STOP to any Senator Campaign Committee text message to unsubscribe. You will receive one final confirmation that you have been unsubscribed. Reply HELP to any message for assistance. Message frequency varies. Message and data rates may apply.</p>
 
       <h2>5. Your Rights</h2>
       <p>
@@ -95,5 +101,5 @@ export default function PrivacyPolicyPage() {
         Phone: +1 (503) 555-0100
       </p>
     </LegalLayout>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 export function AboutSection() {
   return (
@@ -52,5 +52,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

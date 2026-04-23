@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Senator Campaign event placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1e3f"/>
+      <stop offset="1" stop-color="#132d5a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="55%">
+      <stop offset="0" stop-color="#dd131a" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#dd131a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 540 L1200 420"/>
+    <path d="M0 600 L1200 480"/>
+    <path d="M0 660 L1200 540"/>
+  </g>
+  <g transform="translate(600 300)" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" fill="#ffffff">
+    <text y="0" font-size="44" font-weight="700" letter-spacing="12" fill="#dd131a">SENATOR CAMPAIGN</text>
+    <text y="70" font-size="72" font-weight="800" letter-spacing="2">Oregon Events</text>
+    <text y="130" font-size="22" fill-opacity="0.75" letter-spacing="6">JOIN US ON THE CAMPAIGN TRAIL</text>
+  </g>
+  <g transform="translate(600 520)" text-anchor="middle">
+    <line x1="-60" y1="0" x2="60" y2="0" stroke="#dd131a" stroke-width="3"/>
+  </g>
+</svg>

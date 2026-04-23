@@ -1,26 +1,27 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone } from "lucide-react";
+import Link from 'next/link'
+import Image from 'next/image'
+import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone } from 'lucide-react'
 
-const quick_links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/events", label: "Events" },
-  { href: "/volunteer", label: "Volunteer" },
-  { href: "/contact", label: "Contact" },
-];
+const quickLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/events', label: 'Events' },
+  { href: '/volunteer', label: 'Volunteer' },
+  { href: '/ask', label: 'Ask' },
+  { href: '/contact', label: 'Contact' },
+]
 
-const legal_links = [
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms-of-service", label: "Terms of Service" },
-];
+const legalLinks = [
+  { href: '/privacy-policy', label: 'Privacy Policy' },
+  { href: '/terms-of-service', label: 'Terms of Service' },
+]
 
-const social_links = [
-  { href: "#facebook", label: "Facebook", Icon: Facebook },
-  { href: "#twitter", label: "Twitter", Icon: Twitter },
-  { href: "#instagram", label: "Instagram", Icon: Instagram },
-  { href: "#youtube", label: "YouTube", Icon: Youtube },
-];
+const socialLinks = [
+  { href: '#facebook', label: 'Facebook', Icon: Facebook },
+  { href: '#twitter', label: 'Twitter', Icon: Twitter },
+  { href: '#instagram', label: 'Instagram', Icon: Instagram },
+  { href: '#youtube', label: 'YouTube', Icon: Youtube },
+]
 
 export function Footer() {
   return (
@@ -45,7 +46,7 @@ export function Footer() {
               One Nation. One Voice. One Future. A transparent, measurable campaign for every community in America.
             </p>
             <div className="flex flex-wrap gap-2">
-              {social_links.map(({ href, label, Icon }) => (
+              {socialLinks.map(({ href, label, Icon }) => (
                 <Link
                   key={label}
                   href={href}
@@ -61,7 +62,7 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-bold text-white text-lg sm:text-xl mb-4 sm:mb-5">Quick Links</h4>
             <nav className="flex flex-col gap-3">
-              {quick_links.map((link) => (
+              {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -106,7 +107,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-x-5 gap-y-2">
             <p className="text-[#94a3b8]">&copy; 2026 Senator Campaign Committee. All rights reserved.</p>
             <div className="flex items-center gap-4">
-              {legal_links.map((l) => (
+              {legalLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
@@ -121,5 +122,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

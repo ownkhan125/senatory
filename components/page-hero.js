@@ -19,5 +19,5 @@ export function PageHero({ eyebrow, title, lede }) {
         ) : null}
       </div>
     </section>
-  );
+  )
 }

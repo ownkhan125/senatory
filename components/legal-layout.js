@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/navbar/navbar";
-import { Footer } from "@/components/footer/footer";
-import { PageHero } from "@/components/page-hero";
+import { Navbar } from '@/components/navbar/navbar'
+import { Footer } from '@/components/footer/footer'
+import { PageHero } from '@/components/page-hero'
 
 export function LegalLayout({ eyebrow, title, lastUpdated, children }) {
   return (
@@ -64,5 +64,5 @@ export function LegalLayout({ eyebrow, title, lastUpdated, children }) {
         .legal-prose strong { color: #232323; }
       `}</style>
     </>
-  );
+  )
 }

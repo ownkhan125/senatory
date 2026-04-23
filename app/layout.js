@@ -1,25 +1,25 @@
-import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import { Inter, Playfair_Display } from 'next/font/google'
+import './globals.css'
 
 const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap",
-});
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair",
-  display: "swap",
-});
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
 export const metadata = {
-  title: "Senator — Leading America Forward",
+  title: 'Senator — Leading America Forward',
   description:
-    "The official platform for the Senator campaign. One Nation. One Voice. One Future.",
-};
+    'The official platform for the Senator campaign. One Nation. One Voice. One Future.',
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -28,5 +28,5 @@ export default function RootLayout({ children }) {
         {children}
       </body>
     </html>
-  );
+  )
 }

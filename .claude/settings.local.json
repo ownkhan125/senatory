@@ -51,7 +51,22 @@
       "Bash(node run.js)",
       "Bash(node run.js audit.js)",
       "Bash(node run.js verify.js)",
-      "Bash(echo \"started $!\")"
+      "Bash(echo \"started $!\")",
+      "Bash(node run.js /tmp/playwright-test-ask.js)",
+      "Bash(node run.js \"C:/tmp/playwright-test-ask.js\")",
+      "Bash(node run.js \"C:/tmp/playwright-test-ask-verify.js\")",
+      "Bash(npx next *)",
+      "Bash(node run.js \"C:/tmp/playwright-test-ask-prod.js\")",
+      "Bash(powershell Get-NetTCPConnection -LocalPort 3456 -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty OwningProcess | ForEach-Object { Stop-Process -Id \\\\$_ -Force } *)",
+      "Bash(node -e \"require\\('./lib/ghl.js'\\)\")",
+      "Bash(node --check lib/ghl.js)",
+      "Bash(node --check app/api/events/route.js)",
+      "Bash(node --check \"app/api/events/[id]/route.js\")",
+      "Bash(node --check app/events/page.js)",
+      "Bash(node --check \"app/events/[id]/page.js\")",
+      "Bash(node run.js /tmp/playwright-test-events.js)",
+      "Bash(node run.js \"C:\\\\Users\\\\General\\\\AppData\\\\Local\\\\Temp\\\\playwright-test-events.js\")",
+      "Bash(node run.js \"C:\\\\Users\\\\General\\\\AppData\\\\Local\\\\Temp\\\\playwright-a2p-audit.js\")"
     ]
   }
 }

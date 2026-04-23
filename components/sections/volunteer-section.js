@@ -1,72 +1,72 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Check } from "lucide-react";
+import { useState } from 'react'
+import { Check } from 'lucide-react'
 
-const help_options = [
-  "Canvassing",
-  "Social Media",
-  "Event Support",
-  "Donations",
-  "Other",
-];
+const helpOptions = [
+  'Canvassing',
+  'Social Media',
+  'Event Support',
+  'Donations',
+  'Other',
+]
 
 const reasons = [
-  "Change starts with people, not promises — every hour counts.",
+  'Change starts with people, not promises — every hour counts.',
   "You'll be part of a transparent, measured campaign.",
-  "Training, community, and real impact in every district.",
-];
+  'Training, community, and real impact in every district.',
+]
 
-const initial_form = {
-  full_name: "",
-  email: "",
-  phone: "",
-  city: "",
-  help_type: "",
-};
+const initialForm = {
+  fullName: '',
+  email: '',
+  phone: '',
+  city: '',
+  helpType: '',
+}
 
 export function VolunteerSection() {
-  const [form, set_form] = useState(initial_form);
-  const [errors, set_errors] = useState({});
-  const [submitted, set_submitted] = useState(false);
+  const [form, setForm] = useState(initialForm)
+  const [errors, setErrors] = useState({})
+  const [submitted, setSubmitted] = useState(false)
 
-  const on_change = (field) => (e) => {
-    set_form((prev) => ({ ...prev, [field]: e.target.value }));
+  const onChange = (field) => (e) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }))
     if (errors[field]) {
-      set_errors((prev) => ({ ...prev, [field]: null }));
+      setErrors((prev) => ({ ...prev, [field]: null }))
     }
-  };
+  }
 
-  const handle_submit = (e) => {
-    e.preventDefault();
-    const next_errors = {};
-    if (!form.full_name.trim()) next_errors.full_name = "Full name is required.";
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const nextErrors = {}
+    if (!form.fullName.trim()) nextErrors.fullName = 'Full name is required.'
     if (!form.email.trim()) {
-      next_errors.email = "Email is required.";
+      nextErrors.email = 'Email is required.'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      next_errors.email = "Enter a valid email address.";
+      nextErrors.email = 'Enter a valid email address.'
     }
-    if (!form.phone.trim()) next_errors.phone = "Phone number is required.";
-    if (!form.city.trim()) next_errors.city = "City and state are required.";
-    if (!form.help_type) next_errors.help_type = "Please select how you'd like to help.";
+    if (!form.phone.trim()) nextErrors.phone = 'Phone number is required.'
+    if (!form.city.trim()) nextErrors.city = 'City and state are required.'
+    if (!form.helpType) nextErrors.helpType = "Please select how you'd like to help."
 
-    if (Object.keys(next_errors).length > 0) {
-      set_errors(next_errors);
-      return;
+    if (Object.keys(nextErrors).length > 0) {
+      setErrors(nextErrors)
+      return
     }
-    set_errors({});
-    set_submitted(true);
-  };
+    setErrors({})
+    setSubmitted(true)
+  }
 
-  const input_base =
-    "w-full bg-white text-ink font-body text-[15px] px-3.5 py-3 rounded-brand-md border-[1.5px] transition-all duration-300 ease-brand placeholder:text-gray-400";
-  const input_ok =
-    "border-gray-300 hover:border-gray-500 focus:border-brand-red focus:outline-none focus:ring-4 focus:ring-brand-red/15";
-  const input_err =
-    "border-error focus:border-error focus:outline-none focus:ring-4 focus:ring-error/20";
+  const inputBase =
+    'w-full bg-white text-ink font-body text-[15px] px-3.5 py-3 rounded-brand-md border-[1.5px] transition-all duration-300 ease-brand placeholder:text-gray-400'
+  const inputOk =
+    'border-gray-300 hover:border-gray-500 focus:border-brand-red focus:outline-none focus:ring-4 focus:ring-brand-red/15'
+  const inputErr =
+    'border-error focus:border-error focus:outline-none focus:ring-4 focus:ring-error/20'
 
-  const field_class = (field) =>
-    `${input_base} ${errors[field] ? input_err : input_ok}`;
+  const fieldClass = (field) =>
+    `${inputBase} ${errors[field] ? inputErr : inputOk}`
 
   return (
     <section id="volunteer" className="bg-navy py-20 md:py-28">
@@ -112,7 +112,7 @@ export function VolunteerSection() {
               </div>
             ) : (
               <form
-                onSubmit={handle_submit}
+                onSubmit={handleSubmit}
                 noValidate
                 className="flex flex-col gap-5"
               >
@@ -126,15 +126,15 @@ export function VolunteerSection() {
                   <input
                     id="full_name"
                     type="text"
-                    value={form.full_name}
-                    onChange={on_change("full_name")}
+                    value={form.fullName}
+                    onChange={onChange('fullName')}
                     placeholder="As on your voter registration"
-                    className={field_class("full_name")}
-                    aria-invalid={Boolean(errors.full_name)}
+                    className={fieldClass('fullName')}
+                    aria-invalid={Boolean(errors.fullName)}
                   />
-                  {errors.full_name && (
+                  {errors.fullName && (
                     <p className="mt-2 text-xs font-medium text-error">
-                      {errors.full_name}
+                      {errors.fullName}
                     </p>
                   )}
                 </div>
@@ -150,9 +150,9 @@ export function VolunteerSection() {
                     id="email"
                     type="email"
                     value={form.email}
-                    onChange={on_change("email")}
+                    onChange={onChange('email')}
                     placeholder="name@example.com"
-                    className={field_class("email")}
+                    className={fieldClass('email')}
                     aria-invalid={Boolean(errors.email)}
                   />
                   {errors.email && (
@@ -173,9 +173,9 @@ export function VolunteerSection() {
                     id="phone"
                     type="tel"
                     value={form.phone}
-                    onChange={on_change("phone")}
+                    onChange={onChange('phone')}
                     placeholder="(503) 555-0100"
-                    className={field_class("phone")}
+                    className={fieldClass('phone')}
                     aria-invalid={Boolean(errors.phone)}
                   />
                   {errors.phone && (
@@ -196,9 +196,9 @@ export function VolunteerSection() {
                     id="city"
                     type="text"
                     value={form.city}
-                    onChange={on_change("city")}
+                    onChange={onChange('city')}
                     placeholder="Portland, OR"
-                    className={field_class("city")}
+                    className={fieldClass('city')}
                     aria-invalid={Boolean(errors.city)}
                   />
                   {errors.city && (
@@ -217,21 +217,21 @@ export function VolunteerSection() {
                   </label>
                   <select
                     id="help_type"
-                    value={form.help_type}
-                    onChange={on_change("help_type")}
-                    className={field_class("help_type")}
-                    aria-invalid={Boolean(errors.help_type)}
+                    value={form.helpType}
+                    onChange={onChange('helpType')}
+                    className={fieldClass('helpType')}
+                    aria-invalid={Boolean(errors.helpType)}
                   >
                     <option value="">Select a role</option>
-                    {help_options.map((o) => (
+                    {helpOptions.map((o) => (
                       <option key={o} value={o}>
                         {o}
                       </option>
                     ))}
                   </select>
-                  {errors.help_type && (
+                  {errors.helpType && (
                     <p className="mt-2 text-xs font-medium text-error">
-                      {errors.help_type}
+                      {errors.helpType}
                     </p>
                   )}
                 </div>
@@ -248,5 +248,5 @@ export function VolunteerSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import { LegalLayout } from "@/components/legal-layout";
+import { LegalLayout } from '@/components/legal-layout'
 
 export const metadata = {
-  title: "Terms of Service — Senator Campaign",
-  description: "Terms governing the use of the Senator Campaign Committee website and services.",
-};
+  title: 'Terms of Service — Senator Campaign',
+  description: 'Terms governing the use of the Senator Campaign Committee website and services.',
+}
 
 export default function TermsOfServicePage() {
   return (
@@ -41,37 +41,33 @@ export default function TermsOfServicePage() {
       </p>
 
       <h2>6. SMS Messaging and Communications</h2>
+      <h3>Program Name and Description</h3>
+      <p>
+        Senator Campaign Committee operates an SMS messaging program for its supporters, volunteers, and subscribers. Upon opting in, you can expect to receive text messages that may include: shift reminders, event invitations and updates, volunteer coordination, get-out-the-vote reminders, fundraising appeals, donation drives, and general campaign communications from Senator Campaign Committee.
+      </p>
       <h3>Opt-In Process</h3>
       <p>
-        By checking the SMS consent box on any form, you expressly consent to receive text messages from the campaign at the phone number you provided.
+        By checking the SMS consent box on any form, you expressly consent to receive text messages from Senator Campaign Committee at the phone number you provided. Consent to receive SMS messages is not a condition of purchase, contribution, or participation in the campaign.
       </p>
-      <h3>Types of Messages</h3>
+      <h3>Opt-Out Instructions (STOP)</h3>
       <p>
-        Messages may include shift reminders, event updates, get-out-the-vote reminders, fundraising appeals, and general campaign communications.
+        You can cancel the SMS service at any time. Simply text STOP to the shortcode. You will receive one final confirmation that you have unsubscribed. After unsubscribing, you will no longer receive SMS messages from us. If you want to join again, simply sign up as you did the first time and we will resume sending SMS messages to you.
       </p>
-      <h3>Message Frequency</h3>
+      <h3>HELP Instructions</h3>
       <p>
-        Message frequency varies based on campaign activity. You will not receive more than reasonably necessary.
-      </p>
-      <h3>Fees</h3>
-      <p>
-        Message and data rates may apply based on your carrier plan. The Committee does not charge you directly for messages.
-      </p>
-      <h3>Opt-Out Instructions</h3>
-      <p>
-        Reply STOP at any time to stop receiving messages. You will receive one final confirmation that you have unsubscribed.
-      </p>
-      <h3>Help Instructions</h3>
-      <p>
-        Reply HELP to any campaign text to receive information about how to contact us.
-      </p>
-      <h3>Consent Disclaimer</h3>
-      <p>
-        Consent to receive SMS messages is not a condition of purchase, contribution, or participation in the campaign.
+        If you experience issues with the messaging program, reply with the keyword HELP for more assistance, or reach out directly to <a href="mailto:support@senatorycampaign.com">support@senatorycampaign.com</a> or +1 (503) 555-0100.
       </p>
       <h3>Carrier Liability</h3>
       <p>
-        Wireless carriers are not liable for delayed or undelivered messages.
+        Carriers are not liable for delayed or undelivered messages.
+      </p>
+      <h3>Message and Data Rates and Frequency</h3>
+      <p>
+        As always, message and data rates may apply for messages sent to you from us and to us from you. Message frequency varies.
+      </p>
+      <h3>Privacy Policy</h3>
+      <p>
+        For privacy-related inquiries, please refer to our privacy policy: <a href="/privacy-policy">Privacy Policy</a>.
       </p>
       <h3>Age Requirement</h3>
       <p>
@@ -126,5 +122,5 @@ export default function TermsOfServicePage() {
         Phone: +1 (503) 555-0100
       </p>
     </LegalLayout>
-  );
+  )
 }

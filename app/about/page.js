@@ -1,59 +1,59 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Award, Briefcase, GraduationCap, Scale, Heart, Users, ShieldCheck, Lightbulb, Home } from "lucide-react";
-import { Navbar } from "@/components/navbar/navbar";
-import { Footer } from "@/components/footer/footer";
-import { PageHero } from "@/components/page-hero";
+import Image from 'next/image'
+import Link from 'next/link'
+import { Award, Briefcase, GraduationCap, Scale, Heart, Users, ShieldCheck, Lightbulb, Home } from 'lucide-react'
+import { Navbar } from '@/components/navbar/navbar'
+import { Footer } from '@/components/footer/footer'
+import { PageHero } from '@/components/page-hero'
 
 export const metadata = {
-  title: "About — Senator Campaign",
-  description: "Meet the candidate. A career built on service, evidence, and real results for every community.",
-};
+  title: 'About — Senator Campaign',
+  description: 'Meet the candidate. A career built on service, evidence, and real results for every community.',
+}
 
 const expertise = [
   {
     Icon: Award,
-    title: "Public Service Award",
-    body: "Recognized for a decade of community service — funding local clinics, schools, and small-business grants in underserved districts.",
+    title: 'Public Service Award',
+    body: 'Recognized for a decade of community service — funding local clinics, schools, and small-business grants in underserved districts.',
   },
   {
     Icon: Scale,
-    title: "State Legislature Testimony",
-    body: "Testified before the state legislature on fiscal policy, election integrity, and public-health reform. Record available on request.",
+    title: 'State Legislature Testimony',
+    body: 'Testified before the state legislature on fiscal policy, election integrity, and public-health reform. Record available on request.',
   },
   {
     Icon: GraduationCap,
-    title: "Professional Credentials",
-    body: "J.D., magna cum laude. Fifteen years counseling small businesses and nonprofits on transparent governance and regulatory compliance.",
+    title: 'Professional Credentials',
+    body: 'J.D., magna cum laude. Fifteen years counseling small businesses and nonprofits on transparent governance and regulatory compliance.',
   },
-];
+]
 
 const career = [
-  { year: "2003", title: "Bachelor of Public Affairs", body: "Public policy with a minor in economics. Dean's List, student government president." },
-  { year: "2007", title: "Juris Doctor", body: "Specialization in constitutional law and administrative procedure. Graduated magna cum laude." },
-  { year: "2009", title: "Small Business Counsel", body: "Advised over 200 local businesses on contracts, permitting, and tax compliance." },
-  { year: "2014", title: "County Commissioner", body: "Elected to two consecutive terms. Led transparent-budget reform and opened public records to full online access." },
-  { year: "2019", title: "Community Foundation Board", body: "Chaired a regional foundation distributing $12M in grants to after-school programs, food security, and veterans services." },
-  { year: "2024", title: "Running for Congress", body: "Launched a grassroots campaign for the U.S. House, built on accountability, evidence, and community-first policy." },
-];
+  { year: '2003', title: 'Bachelor of Public Affairs', body: "Public policy with a minor in economics. Dean's List, student government president." },
+  { year: '2007', title: 'Juris Doctor', body: 'Specialization in constitutional law and administrative procedure. Graduated magna cum laude.' },
+  { year: '2009', title: 'Small Business Counsel', body: 'Advised over 200 local businesses on contracts, permitting, and tax compliance.' },
+  { year: '2014', title: 'County Commissioner', body: 'Elected to two consecutive terms. Led transparent-budget reform and opened public records to full online access.' },
+  { year: '2019', title: 'Community Foundation Board', body: 'Chaired a regional foundation distributing $12M in grants to after-school programs, food security, and veterans services.' },
+  { year: '2024', title: 'Running for Congress', body: 'Launched a grassroots campaign for the U.S. House, built on accountability, evidence, and community-first policy.' },
+]
 
 const values = [
   {
     Icon: ShieldCheck,
-    title: "Accountability",
-    body: "Every dollar spent, every vote cast — transparent and accountable to the people who sent me.",
+    title: 'Accountability',
+    body: 'Every dollar spent, every vote cast — transparent and accountable to the people who sent me.',
   },
   {
     Icon: Lightbulb,
-    title: "Evidence Over Ideology",
-    body: "Policy grounded in data, science, and real-world outcomes — not partisan talking points or donor scripts.",
+    title: 'Evidence Over Ideology',
+    body: 'Policy grounded in data, science, and real-world outcomes — not partisan talking points or donor scripts.',
   },
   {
     Icon: Home,
-    title: "Community First",
-    body: "Decisions made for the families of this district, not Washington lobbyists or corporate donors.",
+    title: 'Community First',
+    body: 'Decisions made for the families of this district, not Washington lobbyists or corporate donors.',
   },
-];
+]
 
 export default function AboutPage() {
   return (
@@ -227,9 +227,9 @@ export default function AboutPage() {
               </div>
               <div className="space-y-5">
                 {[
-                  { Icon: Users, title: "Parental Authority", body: "Communities, not bureaucrats, decide what students are taught." },
-                  { Icon: Briefcase, title: "Teacher Freedom", body: "Protect First Amendment rights in every classroom." },
-                  { Icon: Heart, title: "Equal Funding, Real Reform", body: "Funding that follows the student — to public, charter, or vocational paths." },
+                  { Icon: Users, title: 'Parental Authority', body: 'Communities, not bureaucrats, decide what students are taught.' },
+                  { Icon: Briefcase, title: 'Teacher Freedom', body: 'Protect First Amendment rights in every classroom.' },
+                  { Icon: Heart, title: 'Equal Funding, Real Reform', body: 'Funding that follows the student — to public, charter, or vocational paths.' },
                 ].map(({ Icon, title, body }) => (
                   <div key={title} className="flex gap-4 items-start bg-white border border-gray-200 rounded-brand-lg p-5 shadow-brand-sm">
                     <div className="flex-shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-brand-md bg-brand-red-soft text-brand-red">
@@ -277,5 +277,5 @@ export default function AboutPage() {
       </main>
       <Footer />
     </>
-  );
+  )
 }

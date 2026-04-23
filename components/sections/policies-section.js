@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 import {
   Briefcase,
   GraduationCap,
@@ -7,52 +7,52 @@ import {
   Shield,
   Users,
   ArrowRight,
-} from "lucide-react";
+} from 'lucide-react'
 
 const policies = [
   {
     Icon: Briefcase,
-    title: "Jobs & Economy",
+    title: 'Jobs & Economy',
     description:
-      "Rebuild American manufacturing, expand small-business lending, and deliver real wage growth in every district.",
-    href: "#policy-economy",
+      'Rebuild American manufacturing, expand small-business lending, and deliver real wage growth in every district.',
+    href: '#policy-economy',
   },
   {
     Icon: GraduationCap,
-    title: "Education",
+    title: 'Education',
     description:
-      "Trust parents, free teachers from red tape, and connect every student to a real path — college or trade.",
-    href: "#policy-education",
+      'Trust parents, free teachers from red tape, and connect every student to a real path — college or trade.',
+    href: '#policy-education',
   },
   {
     Icon: Heart,
-    title: "Healthcare",
+    title: 'Healthcare',
     description:
-      "Lower prescription costs, protect pre-existing conditions, and expand access in rural and underserved communities.",
-    href: "#policy-healthcare",
+      'Lower prescription costs, protect pre-existing conditions, and expand access in rural and underserved communities.',
+    href: '#policy-healthcare',
   },
   {
     Icon: Shield,
-    title: "Safe Communities",
+    title: 'Safe Communities',
     description:
-      "Back local law enforcement with accountability, invest in mental-health response, and secure the border humanely.",
-    href: "#policy-security",
+      'Back local law enforcement with accountability, invest in mental-health response, and secure the border humanely.',
+    href: '#policy-security',
   },
   {
     Icon: Leaf,
-    title: "Clean Environment",
+    title: 'Clean Environment',
     description:
-      "Clean water guarantees, wildfire resilience, and a credible plan to cut emissions without raising household bills.",
-    href: "#policy-climate",
+      'Clean water guarantees, wildfire resilience, and a credible plan to cut emissions without raising household bills.',
+    href: '#policy-climate',
   },
   {
     Icon: Users,
-    title: "Opportunity For All",
+    title: 'Opportunity For All',
     description:
-      "Apprenticeships, veteran support, and pathways for the next generation of American leaders.",
-    href: "#policy-youth",
+      'Apprenticeships, veteran support, and pathways for the next generation of American leaders.',
+    href: '#policy-youth',
   },
-];
+]
 
 export function PoliciesSection() {
   return (
@@ -94,5 +94,5 @@ export function PoliciesSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

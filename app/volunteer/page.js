@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { Navbar } from "@/components/navbar/navbar";
-import { Footer } from "@/components/footer/footer";
-import { PageHero } from "@/components/page-hero";
-import { VolunteerSignupForm } from "@/components/volunteer-signup-form";
+import Link from 'next/link'
+import { Navbar } from '@/components/navbar/navbar'
+import { Footer } from '@/components/footer/footer'
+import { PageHero } from '@/components/page-hero'
+import { VolunteerSignupForm } from '@/components/volunteer-signup-form'
 
 export const metadata = {
-  title: "Volunteer — Senator Campaign",
-  description: "Your energy fuels this movement. Join the team: knock doors, make calls, host events, or lend your skills.",
-};
+  title: 'Volunteer — Senator Campaign',
+  description: 'Your energy fuels this movement. Join the team: knock doors, make calls, host events, or lend your skills.',
+}
 
 export default function VolunteerPage() {
   return (
@@ -85,5 +85,5 @@ export default function VolunteerPage() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
